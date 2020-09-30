@@ -1,0 +1,207 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment-7}
+\author{Ankur Aditya - EE20RESCH11010}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document contains the procedure to find the equation of tangent to parabola.
+\end{abstract}
+Download the python code from 
+\begin{lstlisting}
+https://github.com/ankuraditya13/EE5609-Assignment7
+\end{lstlisting}
+%
+and latex-file codes from 
+%
+\begin{lstlisting}
+https://github.com/ankuraditya13/EE5609-Assignment7
+\end{lstlisting}
+
+\section{Problem}
+Find the QR Decomposition of matrix,
+\begin{align}
+\vec{A} = \myvec{2&-6\\1&-2}
+\label{Q}
+\end{align}
+\section{Solution}
+Let $c_1$ and $c_2$ be the column vectors of given matrix $\vec{A}$
+\begin{align}
+c_1 = \myvec{2\\1}\\
+c_2 = \myvec{-6\\-2}
+\end{align}
+We can express the matrix $\vec{A}$ as,
+\begin{align}
+\vec{A}=\vec{QR}
+\end{align}
+Where, $\vec{Q}$ is an orthogonal matrix given as,
+\begin{align}
+\vec{Q} = \myvec{\vec{u_1}&\vec{u_2}}\label{orthogonal}
+\end{align}
+and $\vec{R}$ is an upper triangular matrix given as,
+\begin{align}
+\vec{R} = \myvec{k_1&r_1\\0&k_2}
+\label{UT}
+\end{align}
+Now, we can express $\alpha$ and $\beta$ as,
+\begin{align}
+c_1 = k_1\vec{u_1}\label{alpha}\\
+c_2 = r_1\vec{u_1} +k_2\vec{u_2}\label{beta}\\
+\mbox{where, } k_1 = \norm{c_1} = \sqrt{2^2+(1^2} = \sqrt{5}\label{k1}
+\end{align} 
+Solving equation \eqref{alpha} for $\vec{u_1}$ ,
+\begin{align}
+\vec{u_1} = \frac{c_1}{k_1} = \frac{1}{\sqrt{5}}\myvec{2\\1}\label{u1}
+\end{align}
+\begin{align}
+\mbox{Now, } r_1 = \frac{\vec{u_1}^Tc_2}{\norm{\vec{u_1}}^2}\\
+\implies \frac{\frac{1}{\sqrt{5}}\myvec{2&1}\myvec{-6\\-2}}{1}
+\end{align}
+\begin{align}
+\mbox{Hence, } r_1 = -\frac{-14}{\sqrt{5}}
+\label{r1}\\
+\vec{u_2} = \frac{c_2-r_1\vec{u_1}}{\norm{c_2-r_1\vec{u_1}}}\\
+\implies \frac{\myvec{-6\\-2} - \brak{\frac{-14}{\sqrt{5}}}\brak{\frac{1}{\sqrt{5}}\myvec{2\\1}}}{\norm{\myvec{-6\\-2} - \brak{-\frac{14}{\sqrt{5}}\frac{1}{\sqrt{5}}\myvec{2\\1}}}} 
+\end{align}
+\begin{align}
+\implies\vec{u_2} = \frac{1}{\sqrt{5}}\myvec{-1\\2}\label{u2}
+\end{align}
+\begin{align}
+\mbox{Now, } k_2 = u_2^Tc_2\\
+\implies \frac{1}{\sqrt{5}}\myvec{-1&2}\myvec{-6\\-2}\\\implies k_2 = \frac{2}{\sqrt{5}} \label{k2}
+\end{align}
+Hence substituting the values of unknown parameter from equations \eqref{k1}, \eqref{k2}, \eqref{u1}, \eqref{u2} and \eqref{r1} to equation \eqref{orthogonal} and \eqref{UT} we get,
+\begin{align}
+\vec{Q} = \frac{1}{\sqrt{5}}\myvec{2&-1\\1&2}
+\end{align} 
+\begin{align}
+\vec{R} = \myvec{\sqrt{5}&\frac{-14}{\sqrt{5}}\\0&\frac{2}{\sqrt{5}}}
+\end{align}
+\end{document}
